@@ -35,7 +35,6 @@ box-sizing: border-box;
 }
 
 .cell.invalid-hover:hover {
-    pointer-events: none;
     cursor: not-allowed;
 
 }
