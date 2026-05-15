@@ -129,8 +129,7 @@ function explode(index, colour) {
     updatescore();
 }
     
-       /* document.getElementById('blueS').innerHTML = blue1+blue2;
-        document.getElementById('redS').innerHTML = red1+red2;*/
+       
         nCell.setAttribute('celldots', nDots);
         nCell.setAttribute('cellowner', colour);
         renderDots(nCell, nDots, colour);
@@ -170,7 +169,10 @@ function startTimer() {
         document.getElementById('individualtimer').innerHTML = "Turn Time: " + turntime + "s";
 
         if (totaltime <= 0) {
-            gameOver("TIME OVER! Game ended after 3 minutes.");
+              if(score.blue1>score.red1)
+                   gameOver("TIME OVER! Game ended after 3 minutes. Blue Wins!");
+               else
+                   gameOver("TIME OVER! Game ended after 3 minutes. Red Wins!");
         }
         
         if (turntime <= 0) {
@@ -213,4 +215,4 @@ function updatescore(){
 
 //THIS IS THE END!!
 //fahhhhhhhhhhhhh
-//better luck next time
+
